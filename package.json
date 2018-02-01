@@ -1,0 +1,28 @@
+{
+  "name": "weird_dice",
+  "version": "1.0.0",
+  "description": "Simulation of three sided coins running in the browser",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "start:dev": "webpack-dev-server"
+  },
+  "author": "Robert Heedt",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cannon": "^0.1.2",
+    "@types/dat-gui": "^0.6.3",
+    "@types/node": "^9.4.0",
+    "@types/three": "^0.89.5",
+    "ts-loader": "^3.4.0",
+    "typescript": "^2.7.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "cannon": "^0.6.2",
+    "dat-gui": "^0.5.0",
+    "three": "^0.89.0",
+    "three-orbit-controls": "^82.1.0"
+  }
+}
