@@ -40,6 +40,8 @@ intended, then stop the stimulation and reset the tally. After that you can enab
 - **dynamicColors**: Should coins be colored based on their orientation? Might improve performance if disabled.
 
 ### World
+- **timeScale**: Factor to scale the default simulation time step of 1/60 s. Increasing this will speed up the
+simulation but reduce the accuracy and vice versa.
 - **gravity**: Gravitational acceleration in m/s/s
 - **groundRestitution**: Restitution factor (bouncyness) of the ground between 0 (instant stop) and 1
 (maximum bouncyness). Related to

@@ -197,6 +197,7 @@ let sideCount = 0;
 
 let guiProps = {
     gravity: 9.82,
+    timeScale: 1,
     volumeCcm: 100,
     ratio: "1.7321",
     mass: 0.2,
@@ -249,6 +250,7 @@ let graphicsGui = gui.addFolder("Graphics");
 graphicsGui.add(guiProps, "dynamicColors");
 let simulationGui = gui.addFolder("World");
 simulationGui.add(guiProps, "gravity");
+simulationGui.add(guiProps, "timeScale").min(0);
 simulationGui.add(guiProps, "groundRestitution", 0, 1);
 simulationGui.add(guiProps, "groundFriction", 0, 1);
 let diceGui = gui.addFolder("Dice");
@@ -313,7 +315,7 @@ function animate() {
     diceCannonMaterial.restitution = guiProps.diceRestitution;
     diceCannonMaterial.friction = guiProps.diceFriction;
 
-    world.step(timeStep);
+    world.step(timeStep * guiProps.timeScale);
 
     if (rolling) {
         for (let i = dice.length; i < Math.floor(guiProps.rollCount); i++) {
